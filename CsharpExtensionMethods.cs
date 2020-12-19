@@ -1,6 +1,6 @@
-﻿namespace YoukaiFox.SystemExtensions
+﻿namespace YoukaiFox.CsharpExtensions
 {
-    public static class ExtensionMethods
+    public static class CsharpExtensionMethods
     {
         /// <summary>
         /// Shuffles the array using the Fisher-Yates method.
@@ -15,7 +15,24 @@
             for (int i = 0; i < n; i++)
             {
                 int randomInt = rng.Next(0, i);
-                Swap(items[i], items[randomInt]);
+                Swap(ref items[i], ref items[randomInt]);
+            }
+        }
+
+        /// <summary>
+        /// Shuffles the array using the Fisher-Yates method providing a seed for the random number generator.
+        /// </summary>
+        /// <param name="items"></param>
+        /// <param name="seed"></param>
+        /// <typeparam name="T"></typeparam>
+        public static void Shuffle<T>(this T[] items, int seed)
+        {
+            System.Random rng = new System.Random(seed);
+            
+            for (int i = items.Length - 1; i > 0; i--)
+            {
+                int r = rng.Next(i + 1);
+                Swap(ref items[i], ref items[r]);
             }
         }
 
@@ -34,12 +51,12 @@
         }
 
         /// <summary>
-        /// Swap the two values provided between themselves.
+        /// Swap the two values provided.
         /// </summary>
         /// <param name="v1"></param>
         /// <param name="v2"></param>
         /// <typeparam name="T"></typeparam>
-        public static void Swap<T>(T v1, T v2)
+        public static void Swap<T>(ref T v1, ref T v2)
         {
             T temp = v1;
             v1 = v2;
