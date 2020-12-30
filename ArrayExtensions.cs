@@ -1,8 +1,10 @@
-﻿
+﻿using System.Collections.Generic;
+
 namespace YoukaiFox.CsharpExtensions
 {
     public static class ArrayExtensions
     {
+        // Author: Youkai Fox Studio
         /// <summary>
         /// Shuffles the array using the Fisher-Yates method.
         /// </summary>
@@ -20,6 +22,7 @@ namespace YoukaiFox.CsharpExtensions
             }
         }
 
+        // Author: Youkai Fox Studio
         /// <summary>
         /// Shuffles the array using the Fisher-Yates method providing a seed for the random number generator.
         /// </summary>
@@ -37,6 +40,7 @@ namespace YoukaiFox.CsharpExtensions
             }
         }
 
+        // Author: Youkai Fox Studio
         /// <summary>
         /// Get the first valid index in the collection.
         /// </summary>
@@ -51,6 +55,7 @@ namespace YoukaiFox.CsharpExtensions
             return -1;
         }
 
+        // Author: github.com/dracolytch/DracoSoftwareExtensionsForUnity
         /// <summary>
         /// For each component in an array, take an action
         /// </summary>
@@ -63,6 +68,27 @@ namespace YoukaiFox.CsharpExtensions
             {
                 callback.Invoke(array[i]);
             }
+        }
+
+        // Author: Youkai Fox Studio
+        /// <summary>
+        /// Returns true if array contains element.
+        /// </summary>
+        /// <param name="element">Element to be searched for in the array.</param>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        public static bool Contains<T>(this T[] self, T element)
+        {
+            if (self.Length == 0)
+                return false;
+
+            foreach(T item in self)
+            {
+                if(item.Equals(element))
+                    return true;
+            }
+
+            return false;
         }
     }
 }
