@@ -36,7 +36,7 @@ namespace YoukaiFox.CsharpExtensions
         /// Returns the greater value between <param name="v1"></param>
         /// and <param name="v2"></param>.
         /// </summary>
-        public static T Max(int v1, int v2)
+        public static T Max<T>(T v1, T v2) where T : IComparable<T>
         {
             return v1.CompareTo(v2) > 0 ? v1 : v2;
         }
