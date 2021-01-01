@@ -18,7 +18,7 @@ namespace YoukaiFox.CsharpExtensions
             for (int i = 0; i < n; i++)
             {
                 int randomInt = rng.Next(0, i);
-                MiscExtensions.Swap(ref items[i], ref items[randomInt]);
+                GenericExtensions.Swap(ref items[i], ref items[randomInt]);
             }
         }
 
@@ -36,7 +36,7 @@ namespace YoukaiFox.CsharpExtensions
             for (int i = items.Length - 1; i > 0; i--)
             {
                 int r = rng.Next(i + 1);
-                MiscExtensions.Swap(ref items[i], ref items[r]);
+                GenericExtensions.Swap(ref items[i], ref items[r]);
             }
         }
 

@@ -1,6 +1,6 @@
 ﻿namespace YoukaiFox.CsharpExtensions
 {
-    public static class MiscExtensions
+    public static class GenericExtensions
     {
         // Author: Youkai Fox Studio
         /// <summary>
