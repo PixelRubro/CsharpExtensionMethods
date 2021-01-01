@@ -58,5 +58,21 @@
         {
             return v1 > v2 ? v1 : v2;
         }
+
+        // Author: Youkai Fox Studio
+        /// <summary>
+        /// Checks if <param name="self"> is present in <param name="items">.
+        /// </summary>
+        /// <param name="self"></param>
+        /// <param name="items"></param>
+        /// <typeparam name="T"></typeparam>
+        /// <returns>Returns true if the value is present, false otherwise.</returns>
+        public static bool IsIn<T>(this T self, params T[] items)
+        {
+            if (self == null)
+                throw new System.ArgumentNullException("self");
+
+            return items.Contains(self);
+        }
     }
 }
