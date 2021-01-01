@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using YoukaiFox.CsharpHelper;
 
 namespace YoukaiFox.CsharpExtensions
 {
@@ -18,7 +18,7 @@ namespace YoukaiFox.CsharpExtensions
             for (int i = 0; i < n; i++)
             {
                 int randomInt = rng.Next(0, i);
-                GenericExtensions.Swap(ref items[i], ref items[randomInt]);
+                HelperMethods.Swap(ref items[i], ref items[randomInt]);
             }
         }
 
@@ -36,7 +36,7 @@ namespace YoukaiFox.CsharpExtensions
             for (int i = items.Length - 1; i > 0; i--)
             {
                 int r = rng.Next(i + 1);
-                GenericExtensions.Swap(ref items[i], ref items[r]);
+                HelperMethods.Swap(ref items[i], ref items[r]);
             }
         }
 
