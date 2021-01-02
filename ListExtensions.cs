@@ -8,7 +8,7 @@ namespace YoukaiFox.CsharpExtensions
         /// Add multiple items to a list at once.
         /// </summary>
         /// <param name="elements">Items to be added.</param>
-        public static void AddMultiple<T>(this List<T> list, params T[] elements)
+        public static void AppendRange<T>(this List<T> list, params T[] elements)
         {
             for (int i = 0; i < elements.Length; i++)
             {
