@@ -6,10 +6,8 @@ namespace YoukaiFox.CsharpExtensions
     {
         // Author: Youkai Fox Studio
         /// <summary>
-        /// Shuffles the array using the Fisher-Yates method.
+        /// Shuffles the collection using the Fisher-Yates method.
         /// </summary>
-        /// <param name="items"></param>
-        /// <typeparam name="T"></typeparam>
         public static void Shuffle<T>(this T[] items)
         {
             System.Random rng = new System.Random();
@@ -24,11 +22,10 @@ namespace YoukaiFox.CsharpExtensions
 
         // Author: Youkai Fox Studio
         /// <summary>
-        /// Shuffles the array using the Fisher-Yates method providing a seed for the random number generator.
+        /// Shuffles the collection using the Fisher-Yates method
+        /// providing a seed for the random number generator.
         /// </summary>
-        /// <param name="items"></param>
-        /// <param name="seed"></param>
-        /// <typeparam name="T"></typeparam>
+        /// <param name="seed">Random seed.</param>
         public static void Shuffle<T>(this T[] items, int seed)
         {
             System.Random rng = new System.Random(seed);
@@ -44,9 +41,6 @@ namespace YoukaiFox.CsharpExtensions
         /// <summary>
         /// Get the first valid index in the collection.
         /// </summary>
-        /// <param name="items"></param>
-        /// <typeparam name="T"></typeparam>
-        /// <returns></returns>
         public static int FirstValidIndex<T>(this T[] items)
         {
             if (items.Length > 0)
@@ -57,11 +51,9 @@ namespace YoukaiFox.CsharpExtensions
 
         // Author: github.com/dracolytch/DracoSoftwareExtensionsForUnity
         /// <summary>
-        /// For each component in an array, take an action
+        /// For each component in an array, take an action.
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="array"></param>
-        /// <param name="callback">The action to take</param>
+        /// <param name="callback">The action to be taken.</param>
         public static void ForEachComponent<T>(this T[] array, System.Action<T> callback) where T : UnityEngine.Component
         {
             for (var i = 0; i < array.Length; i++)
@@ -72,11 +64,8 @@ namespace YoukaiFox.CsharpExtensions
 
         // Author: Youkai Fox Studio
         /// <summary>
-        /// Returns true if array contains element.
+        /// Returns true if array <paramref name="self"/> contains <paramref name="element"/>.
         /// </summary>
-        /// <param name="element">Element to be searched for in the array.</param>
-        /// <typeparam name="T"></typeparam>
-        /// <returns></returns>
         public static bool Contains<T>(this T[] self, T element)
         {
             if (self.Length == 0)

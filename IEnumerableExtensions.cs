@@ -7,7 +7,7 @@ namespace YoukaiFox.CsharpExtensions
     {
         // Author: github.com/sponticelli.
         /// <summary>
-        /// Returns true if the list is null or has 0 objects.
+        /// Returns true if the list is null or has 0 object.
         /// </summary>
         public static bool IsNullOrEmpty<T>(this IEnumerable<T> self)
         {

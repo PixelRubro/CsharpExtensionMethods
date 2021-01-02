@@ -6,10 +6,8 @@ namespace YoukaiFox.CsharpExtensions
     {
         // Author: Youkai Fox Studio
         /// <summary>
-        /// Checks if <param name="self"></param> is present
-        /// in the collection in <param name="items"></param>
+        /// Checks if value is present in the provided array.
         /// </summary>
-        /// <returns>Returns true if the value is present, false otherwise.</returns>
         public static bool IsIn<T>(this T self, params T[] items)
         {
             if (self == null)
@@ -20,11 +18,11 @@ namespace YoukaiFox.CsharpExtensions
 
         // Author: From Stack Overflow.
         /// <summary>
-        /// Checks if <param name="self"> is between <param name="lower">
-        /// (inclusive) and <param name="upper"> (exclusive).
+        /// Checks if <paramref name="self"/> value is between the values of the
+        /// lower bound <paramref name="lower"/> (inclusive) and of the upper
+        /// bound <paramref name="upper"/> (exclusive).
         /// </summary>
         /// <typeparam name="T">Any type implementing IComparable interface.</typeparam>
-        /// <returns>Returns true if it's between the values.</returns>
         public static bool IsBetween<T>(this T self, T lower, T upper)
             where T : IComparable<T>
         {

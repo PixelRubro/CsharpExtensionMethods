@@ -7,9 +7,7 @@ namespace YoukaiFox.CsharpExtensions
         /// <summary>
         /// Add multiple items to a list at once.
         /// </summary>
-        /// <param name="list"></param>
-        /// <param name="elements"></param>
-        /// <typeparam name="T"></typeparam>
+        /// <param name="elements">Items to be added.</param>
         public static void AddMultiple<T>(this List<T> list, params T[] elements)
         {
             for (int i = 0; i < elements.Length; i++)
@@ -21,9 +19,6 @@ namespace YoukaiFox.CsharpExtensions
         /// <summary>
         /// Returns a string with all the list data.
         /// </summary>
-        /// <param name="self"></param>
-        /// <typeparam name="T"></typeparam>
-        /// <returns></returns>
         public static string ToString<T>(this List<T> self)
         {
             System.Text.StringBuilder listContent = new System.Text.StringBuilder();
