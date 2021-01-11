@@ -5,35 +5,60 @@ namespace YoukaiFox.CsharpExtensions
 {
     public static class StringExtensions
     {
+        // Author: Youkai Fox
         /// <summary>
-        /// Indicates whether the current string matches the supplied wildcard pattern.  Behaves the same
-        /// as VB's "Like" Operator.
+        /// Converts "_stringExample" to "String Example".
         /// </summary>
-        /// <param name="self">The string instance where the extension method is called</param>
-        /// <param name="wildcardPattern">The wildcard pattern to match.  Syntax matches VB's Like operator.</param>
-        /// <returns>true if the string matches the supplied pattern, false otherwise.</returns>
-        /// <remarks>See http://msdn.microsoft.com/en-us/library/swf8kaxw(v=VS.100).aspx</remarks>
-        public static bool IsLike(this string self, string wildcardPattern) {
-            if (self == null || String.IsNullOrEmpty(wildcardPattern)) return false;
-            // turn into regex pattern, and match the whole string with ^$
-            var regexPattern = "^" + Regex.Escape(wildcardPattern) + "$";
+        public static string ToTitleCase(this string self)
+        {
+            // Add spaces.
+            string output = Regex.Replace(self, @"[A-Z]", " $0");
 
-            // add support for ?, #, *, [], and [!]
-            regexPattern = regexPattern.Replace(@"\[!", "[^")
-                                       .Replace(@"\[", "[")
-                                       .Replace(@"\]", "]")
-                                       .Replace(@"\?", ".")
-                                       .Replace(@"\*", ".*")
-                                       .Replace(@"\#", @"\d");
-
-            var result = false;
-            try {
-                result = Regex.IsMatch(self, regexPattern);
-            }
-            catch (ArgumentException ex) {
-                throw new ArgumentException(String.Format("Invalid pattern: {0}", wildcardPattern), ex);
-            }
-            return result;
+            output = output.RemoveFirstUnderscore();
+            // output = output.ReplaceUnderscoresWithSpaces();
+            return output.CapitalizeFirstLetter();
         }
+
+        // Author: Youkai Fox
+        // Author: Youkai Fox
+        /// <summary>
+        /// Converts "_stringExample" to "String example".
+        /// </summary>
+        public static string ToSentenceCase(this string self)
+        {
+            // Add spaces and uncapitalize the following letter.
+            string output = Regex.Replace(self, @"[A-Z]", " $0").ToLower();
+
+            output = output.RemoveFirstUnderscore();
+            // output = output.ReplaceUnderscoresWithSpaces();
+            return output.CapitalizeFirstLetter();
+        }
+
+        // Author: Youkai Fox
+        private static string CapitalizeFirstLetter(this string self)
+        {
+            if (self.Length < 2)
+                throw new IndexOutOfRangeException();
+
+            return char.ToUpperInvariant(self[0]) + self.Substring(1);
+        }
+
+        // Author: Youkai Fox
+        private static string RemoveFirstUnderscore(this string self)
+        {
+            if (self.Length < 2)
+                throw new IndexOutOfRangeException();
+
+            if (self[0] == '_')
+                return self.Substring(1);
+
+            return self;
+        }
+
+        // Author: Youkai Fox
+        // private static string ReplaceUnderscoresWithSpaces(this string self)
+        // {
+        //     return self.Replace('_', ' ');
+        // }
     }
 }
