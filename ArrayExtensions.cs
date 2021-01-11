@@ -10,6 +10,9 @@ namespace YoukaiFox.CsharpExtensions
         /// </summary>
         public static void Shuffle<T>(this T[] items)
         {
+            if (items.Length == 0)
+                return;
+
             System.Random rng = new System.Random();
             int n = items.Length;
 
@@ -28,6 +31,9 @@ namespace YoukaiFox.CsharpExtensions
         /// <param name="seed">Random seed.</param>
         public static void Shuffle<T>(this T[] items, int seed)
         {
+            if (items.Length == 0)
+                return;
+                
             System.Random rng = new System.Random(seed);
 
             for (int i = items.Length - 1; i > 0; i--)
