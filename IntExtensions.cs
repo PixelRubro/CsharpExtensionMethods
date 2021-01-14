@@ -13,8 +13,8 @@ namespace YoukaiFox.CsharpExtensions
             }
 
             return Alphabet[self - 1];
-    public static class IntExtensions
-    {
+        }
+
         // Author: https://github.com/Deadcows
         /// <summary>
         /// Convert arabic numerals to roman numerals.
@@ -37,5 +37,4 @@ namespace YoukaiFox.CsharpExtensions
             if (self > 0) return "I" + ToRoman(self - 1);
             return "";
         }
-    }
 }
