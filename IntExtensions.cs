@@ -37,4 +37,5 @@ namespace YoukaiFox.CsharpExtensions
             if (self > 0) return "I" + ToRoman(self - 1);
             return "";
         }
+    }
 }
