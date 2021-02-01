@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace YoukaiFox.CsharpHelper
+namespace YoukaiFox.CsharpExtensions.Helper
 {
     public static class HelperMethods
     {

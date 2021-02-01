@@ -1,4 +1,5 @@
-﻿using YoukaiFox.CsharpHelper;
+﻿using YoukaiFox.CsharpExtensions;
+using YoukaiFox.CsharpExtensions.Helper;
 
 namespace YoukaiFox.CsharpExtensions
 {
