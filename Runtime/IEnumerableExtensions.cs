@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace YoukaiFox.CsharpExtensions
+namespace SoftBoiledGames.CsharpExtensionMethods
 {
     public static class IEnumerableExtensions 
     {

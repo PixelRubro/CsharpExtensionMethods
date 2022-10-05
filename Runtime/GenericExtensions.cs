@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace YoukaiFox.CsharpExtensions
+namespace SoftBoiledGames.CsharpExtensionMethods
 {
     public static class GenericExtensions
     {
-        // Author: Youkai Fox Studio
+        // Author: Soft Boiled Games
         /// <summary>
         /// Checks if value is present in the provided array.
         /// </summary>

@@ -1,4 +1,4 @@
-namespace YoukaiFox.CsharpExtensions
+namespace SoftBoiledGames.CsharpExtensionMethods
 {
     public static class IntExtensions 
     {

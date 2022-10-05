@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace YoukaiFox.CsharpExtensions
+namespace SoftBoiledGames.CsharpExtensionMethods
 {
     public static class ListExtensions 
     {

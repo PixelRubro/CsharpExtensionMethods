@@ -1,8 +1,8 @@
-namespace YoukaiFox.CsharpExtensions
+namespace SoftBoiledGames.CsharpExtensionMethods
 {
     public static class BoolExtensions 
     {
-        // Author: Youkai Fox Studio
+        // Author: Soft Boiled Games
         /// <summary>
         /// Converts the boolean to an int value, as in C language.
         /// </summary>

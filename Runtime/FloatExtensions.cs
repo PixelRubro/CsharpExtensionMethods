@@ -1,8 +1,8 @@
-namespace YoukaiFox.CsharpExtensions
+namespace SoftBoiledGames.CsharpExtensionMethods
 {
     public static class FloatExtensions 
     {
-        // Author: Youkai Fox Studio
+        // Author: Soft Boiled Games
         /// <summary>
         /// Checks if <paramref name="self"/> is approximately equal to 
         /// <paramref name="compared"/> within the tolerance 

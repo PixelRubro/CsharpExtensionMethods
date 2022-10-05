@@ -1,30 +1,33 @@
-﻿using YoukaiFox.CsharpExtensions;
-using YoukaiFox.CsharpExtensions.Helper;
+﻿using SoftBoiledGames.CsharpExtensionMethods;
 
-namespace YoukaiFox.CsharpExtensions
+namespace SoftBoiledGames.CsharpExtensionMethods
 {
     public static class ArrayExtensions
     {
-        // Author: Youkai Fox Studio
+        // Author: Soft Boiled Games
         /// <summary>
         /// Shuffles the collection using the Fisher-Yates method.
         /// </summary>
         public static void Shuffle<T>(this T[] items)
         {
             if (items.Length == 0)
+            {
                 return;
+            }
 
             System.Random rng = new System.Random();
-            int n = items.Length;
+            var n = items.Length;
 
             for (int i = 0; i < n; i++)
             {
                 int randomInt = rng.Next(0, i);
-                HelperMethods.Swap(ref items[i], ref items[randomInt]);
+                var temp = items[i];
+                items[i] = items[randomInt];
+                items[randomInt] = temp;
             }
         }
 
-        // Author: Youkai Fox Studio
+        // Author: Soft Boiled Games
         /// <summary>
         /// Shuffles the collection using the Fisher-Yates method
         /// providing a seed for the random number generator.
@@ -33,27 +36,28 @@ namespace YoukaiFox.CsharpExtensions
         public static void Shuffle<T>(this T[] items, int seed)
         {
             if (items.Length == 0)
+            {
                 return;
+            }
                 
             System.Random rng = new System.Random(seed);
 
             for (int i = items.Length - 1; i > 0; i--)
             {
                 int r = rng.Next(i + 1);
-                HelperMethods.Swap(ref items[i], ref items[r]);
+                var temp = items[i];
+                items[i] = items[r];
+                items[r] = temp;
             }
         }
 
-        // Author: Youkai Fox Studio
+        // Author: Soft Boiled Games
         /// <summary>
         /// Get the first valid index in the collection.
         /// </summary>
         public static int FirstValidIndex<T>(this T[] items)
         {
-            if (items.Length > 0)
-                return 0;
-
-            return -1;
+            return items.Length > 0 ? 0 : -1;
         }
 
         // Author: github.com/dracolytch/DracoSoftwareExtensionsForUnity
@@ -69,19 +73,23 @@ namespace YoukaiFox.CsharpExtensions
             }
         }
 
-        // Author: Youkai Fox Studio
+        // Author: Soft Boiled Games
         /// <summary>
         /// Returns true if array <paramref name="self"/> contains <paramref name="element"/>.
         /// </summary>
         public static bool Contains<T>(this T[] self, T element)
         {
             if (self.Length == 0)
-                return false;
-
-            foreach(T item in self)
             {
-                if(item.Equals(element))
+                return false;
+            }
+
+            foreach (T item in self)
+            {
+                if (item.Equals(element))
+                {
                     return true;
+                }
             }
 
             return false;
