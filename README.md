@@ -15,4 +15,4 @@ Useful extension methods for C# developed for easy instalation with Unity's Pack
 
 Add the following line to your `manifest.json` found in the "Packages" folder
 
-`    "com.softboiledgames.unityxtension": "git@github.com:SoftBoiledGames/CsharpExtensionMethods.git"`
+`    "com.softboiledgames.csharpextensionmethods": "git@github.com:SoftBoiledGames/CsharpExtensionMethods.git"`
