@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SoftBoiledGames.CsharpExtensionMethods
+namespace PixelSpark.CsharpExtensionMethods
 {
     public static class ListExtensions 
     {

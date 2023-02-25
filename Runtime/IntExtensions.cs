@@ -1,4 +1,4 @@
-namespace SoftBoiledGames.CsharpExtensionMethods
+namespace PixelSpark.CsharpExtensionMethods
 {
     public static class IntExtensions 
     {

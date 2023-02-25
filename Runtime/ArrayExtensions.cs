@@ -1,6 +1,6 @@
-﻿using SoftBoiledGames.CsharpExtensionMethods;
+﻿using PixelSpark.CsharpExtensionMethods;
 
-namespace SoftBoiledGames.CsharpExtensionMethods
+namespace PixelSpark.CsharpExtensionMethods
 {
     public static class ArrayExtensions
     {

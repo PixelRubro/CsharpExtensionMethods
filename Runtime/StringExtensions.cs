@@ -1,7 +1,7 @@
 using System;
 using System.Text.RegularExpressions;
 
-namespace SoftBoiledGames.CsharpExtensionMethods
+namespace PixelSpark.CsharpExtensionMethods
 {
     public static class StringExtensions
     {

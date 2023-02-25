@@ -9,10 +9,10 @@ Useful extension methods for C# developed for easy instalation with Unity's Pack
 - Open the Package Manager window
 - Click on the "plus" sign
 - Select "Add package from git URL"
-- Paste this repo's SSH link (git@github.com:SoftBoiledGames/CsharpExtensionMethods.git)
+- Paste this repo's SSH link (git@github.com:PixelSparkStudio/CsharpExtensionMethods.git)
 
 ### Editing manifest file
 
 Add the following line to your `manifest.json` found in the "Packages" folder
 
-`    "com.softboiledgames.csharpextensionmethods": "git@github.com:SoftBoiledGames/CsharpExtensionMethods.git"`
+`    "com.pixelsparkstudio.csharpextensionmethods": "git@github.com:PixelSparkStudio/CsharpExtensionMethods.git"`

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SoftBoiledGames.CsharpExtensionMethods
+namespace PixelSpark.CsharpExtensionMethods
 {
     public static class GenericExtensions
     {
