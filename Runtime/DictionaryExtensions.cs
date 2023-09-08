@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace PixelSpark.CsharpExtensionMethods
+namespace VermillionVanguard.CsharpExtensionMethods
 {
     public static class DictionaryExtensions 
     {

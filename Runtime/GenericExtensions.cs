@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PixelSpark.CsharpExtensionMethods
+namespace VermillionVanguard.CsharpExtensionMethods
 {
     public static class GenericExtensions
     {

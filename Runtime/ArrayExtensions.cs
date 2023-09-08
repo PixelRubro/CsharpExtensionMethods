@@ -1,6 +1,6 @@
-﻿using PixelSpark.CsharpExtensionMethods;
+﻿using VermillionVanguard.CsharpExtensionMethods;
 
-namespace PixelSpark.CsharpExtensionMethods
+namespace VermillionVanguard.CsharpExtensionMethods
 {
     public static class ArrayExtensions
     {

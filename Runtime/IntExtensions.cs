@@ -1,4 +1,4 @@
-namespace PixelSpark.CsharpExtensionMethods
+namespace VermillionVanguard.CsharpExtensionMethods
 {
     public static class IntExtensions 
     {
