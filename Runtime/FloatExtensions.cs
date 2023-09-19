@@ -1,4 +1,4 @@
-namespace VermillionVanguard.CsharpExtensionMethods
+namespace PixelRouge.CsharpExtensionMethods
 {
     public static class FloatExtensions 
     {

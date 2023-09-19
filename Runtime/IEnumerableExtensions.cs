@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace VermillionVanguard.CsharpExtensionMethods
+namespace PixelRouge.CsharpExtensionMethods
 {
     public static class IEnumerableExtensions 
     {

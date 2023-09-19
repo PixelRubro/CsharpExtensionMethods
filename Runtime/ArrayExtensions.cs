@@ -1,6 +1,6 @@
-﻿using VermillionVanguard.CsharpExtensionMethods;
+﻿using PixelRouge.CsharpExtensionMethods;
 
-namespace VermillionVanguard.CsharpExtensionMethods
+namespace PixelRouge.CsharpExtensionMethods
 {
     public static class ArrayExtensions
     {

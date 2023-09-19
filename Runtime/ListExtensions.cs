@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace VermillionVanguard.CsharpExtensionMethods
+namespace PixelRouge.CsharpExtensionMethods
 {
     public static class ListExtensions 
     {
